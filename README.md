@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Screenplay Summarizer AI
 
-## Getting Started
+A Next.js application that leverages Google's Generative AI (Gemini 1.5 Flash) to analyze and summarize screenplay text. This project demonstrates the integration of a modern React frontend with server-side API routes and Large Language Models (LLMs).
 
-First, run the development server:
+## 🚀 Current Status (MVP)
 
+**Phase 1 & 2 Complete:** Core infrastructure, UI, and Text-to-Summary pipeline are fully functional.
+
+- [x] **Frontend Architecture:** Built with Next.js 14 (App Router) & TypeScript.
+- [x] **UI/UX:** Dark-themed, responsive interface utilizing Tailwind CSS.
+- [x] **Backend API:** Secure Serverless Function (`/api/summarize`) to handle AI requests.
+- [x] **AI Integration:** Implemented `gemini-1.5-flash` for high-speed text analysis.
+- [ ] **PDF Parsing:** (Upcoming Phase) Integration of PDF text extraction.
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Next.js 14](https://nextjs.org/)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS
+* **AI Model:** Google Gemini 1.5 Flash via `@google/generative-ai` SDK
+* **IDE:** Cursor
+
+## ⚙️ How It Works
+
+1.  **Input:** User pastes screenplay text into the client-side interface.
+2.  **API Request:** The frontend sends a `POST` request to the internal API route.
+3.  **Processing:** The server-side route authenticates with Google AI and constructs a structured prompt.
+4.  **AI Response:** Gemini analyzes the script and returns a structured summary (Logline, Characters, Synopsis).
+5.  **Rendering:** The frontend receives the JSON response and renders it with whitespace preservation.
+
+## 💻 Getting Started
+
+Follow these steps to run the project locally.
+
+### 1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone [https://github.com/Arya-Jathar/screenplay-summarizer.git](https://github.com/Arya-Jathar/screenplay-summarizer.git)
+cd screenplay-summarizer
